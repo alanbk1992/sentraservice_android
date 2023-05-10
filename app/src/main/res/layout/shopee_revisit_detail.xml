@@ -1,0 +1,3523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/lrDataDetail"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/shopee_revisit_detail_toolbar"
+            layout="@layout/_toolbar" />
+
+        <ScrollView
+            android:id="@+id/scrollViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/shopee_revisit_detail_toolbar"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/btn_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="DataMerchant_click"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/lbl_header_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="DATA MERCHANT"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrowDataMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_down_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lrDataMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/LLCanvassing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvCanvassing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Canvassing"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rbgCanvassing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rbBCAMaintenance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="BCA - MAINTENANCE"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/rbBCAAkuisisi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="NON BCA - AKUISISI"
+                                android:textColor="@color/gray" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvNamaPIC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nama PIC"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_input_pic_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/transparan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvNomorPIC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nomor PIC"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlNomorPIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_input_pic_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/transparan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_EDCTerpasang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitleEDCTerpasang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="EDC Terpasang"
+                            android:textColor="@color/gray"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTypeEdc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:text="Type EDC"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLTypeEDC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_type_edc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_other_type_edc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_other_type_edc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@color/transparan"
+                                android:hint="Lainnya"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/color_gray"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lrSN_EDC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvSNEDC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="SN EDC"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlSNEDC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/shopee_revisit_detail_input_sn_edc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:onClick="ScanEDC_click"
+                                    android:src="@drawable/ic_scan">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvVersiSoftware"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Versi Software"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLVersiSoftware"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_software_version"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvKondisiEdc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Kondisi EDC"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLKondisiEdc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_kondisi_edc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_kondisi_detail_edc_terpasang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Kondisi Detail EDC"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <Spinner
+                                    android:id="@+id/sp_kondisi_detail_edc_terpasang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/spinner_gray"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_kelengkapan_edc_terpasang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kelengkapan EDC"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Tutup Baterai"
+                                    android:textColor="@color/gray" />
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Baterai"
+                                    android:textColor="@color/gray" />
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Adaptor"
+                                    android:textColor="@color/gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Kabel ECR"
+                                    android:textColor="@color/gray" />
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Kabel LAN"
+                                    android:textColor="@color/gray" />
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="PIN Cover"
+                                    android:textColor="@color/gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Sticker Bank"
+                                    android:textColor="@color/gray" />
+
+                                <CheckBox
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/color_red"
+                                    android:text="Lainnya"
+                                    android:textColor="@color/gray" />
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvSimcard1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Simcard 1"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLSimcard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_samcard_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvSimcard2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Simcard 2"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLSimcard2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_samcard_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvProviderSimCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Provider SIM Card"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/RLProviderSimCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_provide_sim_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvICCIDSIM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="ICCID SIM"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_sn_sim"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_no_simcard_terpasang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Nomor Simcard"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/shopee_revisit_detail_no_simcard_terpasang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_LDCditarik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="EDC Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTypeEdcDitarik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Type EDC Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_type_edc_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_other_type_edc_ditarik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_other_type_edc_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@color/transparan"
+                                android:hint="Lainnya"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/color_gray"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lrSN_EDC_Ditarik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="SN EDC Ditarik"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/shopee_revisit_detail_input_sn_edc_ditarik"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:onClick="ScanEDCDitarik_click"
+                                    android:src="@drawable/ic_scan">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Versi Software Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_software_version_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvKondisiEdcDitarik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Kondisi EDC Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_kondisi_edc_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Simcard 1 Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_samcard_1_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Simcard 2 Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_samcard_2_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvProviderSimCardDitarik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Provider SIM Card Ditarik"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_provide_sim_card_ditarik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lrSN_SIM_Ditarik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="ICCID SIM Ditarik"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/shopee_revisit_detail_input_sn_sim_ditarik"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_EDCRetur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="EDC Retur"
+                            android:textColor="@color/gray"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="SN EDC Retur"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_detail_input_sn_edc_return"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:onClick="ScanEDCRetur_click"
+                                android:src="@drawable/ic_scan">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/btn_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:onClick="FotoMerchant_click"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/lbl_header_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="FOTO MERCHANT"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrowFotoMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_down_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lrFotoMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvFotoBagianDepanMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Bagian Depan Merchant"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_input_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoBagianBelakangEDC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Bagian Belakang Mesin EDC"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_edc_belakang"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoBagianDepanEDC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Bagian Depan Mesin EDC"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_edc_depan"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoStrukTransaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Struk Transaksi"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_struk_transaksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvPOSM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto POSM"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_posm"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoEDCBankLain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto EDC Bank Lain"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_edc_bank_lain"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoFKM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto FKM"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_fkm"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoBeritaAcaraMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Berita Acara Merchant"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_input_berita_acara"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <LinearLayout
+                        android:id="@+id/lrFotoBuktiKonfirmasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Foto Bukti Konfirmasi"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/shopee_revisit_detail_bukti_konformasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/gray" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvTTDDigital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tanda Tangan Digital"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_input_esignature"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvFotoLain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Lain"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/shopee_revisit_detail_input_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDataLain"
+                    style="@style/btn_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:onClick="DataLainnya_click"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/lbl_header_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="DATA LAINNYA"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrowDataLainnya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_down_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lrDataLainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Faktur OTS"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_faktur_ots"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/transparan"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Faktur Tambahan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_faktur_tambahan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/transparan"
+                            android:inputType="numberDecimal"
+                            android:maxLength="3"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/btn_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:onClick="StatusMerchant_click"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/lbl_header_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="STATUS"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrowStatusMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_down_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lrStatusMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Status"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <Spinner
+                            android:id="@+id/shopee_revisit_detail_input_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/spinner_gray"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvRescheduleDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Reschedule Date"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlRescheduleDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_input_reschedule_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/transparan"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="@color/black" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTestTransaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Test Transaksi"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlTestTransaksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <Spinner
+                            android:id="@+id/shopee_test_transaksi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/spinner_gray"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Catatan Kunjungan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlspCatatanKunjungan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/shopee_catatan_kunjungan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/spinner_gray"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlCatatanKunjungan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical"
+                        android:onClick="CatatanKunjungan_click">
+
+                        <EditText
+                            android:id="@+id/tvCatatanKunjungan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/transparan"
+                            android:enabled="false"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/ic_down_default">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_request_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Request Merchant"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/sp_request_merchant"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_reason_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Reason Code"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/sp_reason_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_kasir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total kasir"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rbgTotalKasir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rbTotalKasir1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="1 Kasir"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/rbTotalKasir2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="2 Kasir"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/rbTotalKasir3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="3 Kasir"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/rbTotalKasir4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="Lebih dari 3"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/rbTotalKasir5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="#FF3F3F"
+                                android:text="Tidak diketahui"
+                                android:textColor="@color/gray" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_nama_kasir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Kasir yg Disosialisasi"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/et_nama_kasir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remark_sosialisasi_edc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Remark Sosialisasi EDC"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/et_remark_sosialisasi_edc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_materi_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Materi Training"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Fraud Awareness"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Sale/Void/Settlement/Audit Report/Logon"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Installment"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Contactless"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Point Xtra"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Cardver/Offline"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Manual Key In"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="QR"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Other"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remark_edc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Remark EDC"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="EDC/Dongle/SIM CARD/SAM CARD bermasalah"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Alamat/Nama Merchant berbeda dengan SPK"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant menolak dilakukannya pekerjaan"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Perangkat Pendukung EDC belum diterima"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Belum ada konfirmasi dari KP Merchant"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant minta reschedule kunjungan"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant minta penambahan fitur"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="EDC tidak ada di lokasi merchant"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant minta EDC Fixed Line"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Bank belum setting ulang di TMS"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Belum ada konfirmasi dari Bank"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Default Reason Code for DSN"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Belum ada rekening dan ATM"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant sedang direnovasi"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Lokasi merchant belum siap"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Pending atas permintaan Bank"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="EDC berada di KP Merchant"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant tutup sementara"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Adaptor / Charger Hilang"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Line telepon bermasalah"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="EDC disimpan di gudang"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant minta EDC GPRS"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Alamat tidak ditemukan"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Merchant tutup permanen"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="Line telepon belum ada"
+                                android:textColor="@color/gray" />
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/color_red"
+                                android:text="EDC Hilang"
+                                android:textColor="@color/gray" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_mid_tid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 3 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid3Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 6 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid6Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 12 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid12Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 18 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid18Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 24 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid24Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MID Cicilan 36 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/mid36Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QR"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/qr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 3 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid3Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 6 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid6Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 9 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid9Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 12 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid12Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 24 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid24Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TID Cicilan 36 Bulan"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/tid36Bulan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rekpon"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/box_form"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/rekpon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/transparan"
+                                    android:textColor="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lrScanQR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Scan QR"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/shopee_revisit_scan_qr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:enabled="false"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:onClick="ScanQR_click"
+                                android:src="@drawable/ic_scan">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lrDetailRootcause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Detail rootcause"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <Spinner
+                                android:id="@+id/shopee_detail_rootcause"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlDetailRootcause"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical"
+                            android:onClick="DetailRootcause_click">
+
+                            <EditText
+                                android:id="@+id/tvDetailRootcause"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:enabled="false"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/ic_down_default">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_sub_root_cause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sub Root Cause"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/sp_sub_root_cause"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lrSimcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Simcard"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_simcard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lrCollateral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Collateral"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/shopee_collateral"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:background="@drawable/spinner_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_hasil_call_tms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hasil Call TMS"
+                            android:textColor="@color/gray"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/box_form"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/et_hasil_call_tms"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/transparan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Catatan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_form"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/shopee_revisit_detail_input_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:background="@color/transparan"
+                            android:gravity="top"
+                            android:lines="4"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Latitude"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/shopee_revisit_detail_input_latitude"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/underline_input_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Longitude"
+                                android:textColor="@color/gray"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/shopee_revisit_detail_input_longitude"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/underline_input_gray"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/btn_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:onClick="LokasiMerchant_click"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/lbl_header_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="DETAIL LOKASI"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrowLokasiMerchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_down_white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lrLokasiMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Category"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Customer"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tanggal Release Ticket"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_ticket_release"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tanggal Import Bank"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_import_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nama Bank"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ID Lapor/OMPK/Case ID"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_case"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nomor Tiket"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_ticket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="No SPK"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_spk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Jenis Pekerjaan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_work_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="TID/CSI"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_tid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvTIDLama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="TID Previous"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_tid_cimb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="MID"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_mid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nama Merchant"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_merchant_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Alamat Merchant"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_merchant_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Alamat Merchant 2"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_merchant_address_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kode Pos"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kota"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Contact Person"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_contact_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Catatan Pra Kunjungan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:maxLines="20"
+                        android:minLines="1"
+                        android:singleLine="false"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Jenis Kerusakan"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_damage_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kode INIT"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_init"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SLA"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_sla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SN EDC"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_sn_edc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SN SIM"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/shopee_revisit_detail_sn_sim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/shopee_revisit_detail_input_offline_submit"
+                        style="@style/btn_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="SAVE OFFLINE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/shopee_revisit_detail_input_submit"
+                        style="@style/btn_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="SUBMIT"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lrScan"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/color_background"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvFlashlightStatus"
+                android:text="Flashlight OFF"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <Switch
+                android:id="@+id/switchFlashlight"
+                android:thumbTint="@color/color_red"
+                android:trackTint="@color/colorPrimary"
+                android:checked="false"
+                android:onClick="switchFlashlight_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Switch>
+
+        </LinearLayout>
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </me.dm7.barcodescanner.zxing.ZXingScannerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lrESignature"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.gesture.GestureOverlayView
+            android:id="@+id/signaturePad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/white"
+            android:clickable="false"
+            android:eventsInterceptionEnabled="true"
+            android:fadeEnabled="false"
+            android:gestureColor="@color/black"
+            android:gestureStrokeLengthThreshold="0.1"
+            android:gestureStrokeType="multiple"
+            android:longClickable="false"
+            android:orientation="vertical"
+            android:uncertainGestureColor="@color/black"
+            android:splitMotionEvents="true"
+            android:alwaysDrawnWithCache="true"
+            android:fadeOffset="10000000">
+
+        </android.gesture.GestureOverlayView>
+
+        <RelativeLayout
+            android:id="@+id/rellay_esign_donebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/DoneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done" />
+
+                <Button
+                    android:id="@+id/ClearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

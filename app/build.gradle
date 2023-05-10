@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.gip.fms"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 17
+        versionName "2.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0" // WEB SERVICE
+    implementation 'com.google.code.gson:gson:2.8.8' // SERIALIZATION JSON
+    implementation 'de.hdodenhof:circleimageview:3.0.1' // CIRCLE IMAGE VIEW
+    implementation 'com.karumi:dexter:6.2.2' // MANIFEST PERMISSION
+    implementation 'com.squareup.picasso:picasso:2.71828' // IMAGE VIEW RESIZE & DISPLAY
+
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.google.android.material:material:1.6.0'
+
+    /*lottie*/
+    implementation 'com.airbnb.android:lottie:3.0.0'
+
+    /*retrofit*/
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    /*barcode scan*/
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    /*network connectivity & offline store*/
+    implementation 'com.github.pwittchen:reactivenetwork-rx2:3.0.2'
+    implementation 'com.github.satyan:sugar:1.3'
+}

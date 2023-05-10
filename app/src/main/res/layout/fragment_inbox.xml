@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.InboxFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="240dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/inbox"
+            android:tint="@color/color_gray"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+
+        </ImageView>
+
+        <TextView
+            android:text="Inbox"
+            android:textColor="@color/color_gray"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+</RelativeLayout>

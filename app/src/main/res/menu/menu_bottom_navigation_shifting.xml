@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Dashboard"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/navigation_intransit"
+        android:icon="@drawable/ic_file_download"
+        android:title="Intransit"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/navigation_installation"
+        android:icon="@drawable/ic_build"
+        android:title="Installation"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/navigation_stock_opname"
+        android:icon="@drawable/ic_devices"
+        android:title="Stock Opname"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/ic_person_outline"
+        android:title="Profil"
+        app:showAsAction="never"
+        />
+
+</menu>

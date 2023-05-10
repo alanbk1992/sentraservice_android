@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPhoto"
+        android:src="@drawable/edc"
+        android:layout_gravity="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        app:civ_border_color="@color/color_white"
+        app:civ_border_width="0.5dp"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvMovementId"
+            android:text="Movement Id"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvWarehouseName"
+            android:text="Warehouse Name."
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvOrderNo"
+            android:text="Order No."
+            android:textSize="14dp"
+            android:textColor="@color/blue_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:text="Qty"
+            android:textSize="12dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvReturStatus"
+            android:text="Status"
+            android:textSize="14dp"
+            android:textColor="@color/snack_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvReturDate"
+            android:text="send Date"
+            android:textSize="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

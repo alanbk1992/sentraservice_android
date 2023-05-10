@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apps.ams.Installation">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:onClick="btnBack_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <TextView
+            android:gravity="center"
+            android:text="Installation"
+            android:textColor="@color/color_white"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lrDataInstallation"
+            android:orientation="vertical"
+            android:background="@color/color_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lvInstallation"
+                android:divider="@color/color_divider"
+                android:dividerHeight="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lrNoDataInstallation"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="@color/color_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_no_data"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:text="No data found !"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textColor="@color/color_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

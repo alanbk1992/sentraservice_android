@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_white"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="Thermal"
+            android:textColor="@color/color_white"
+            android:padding="12dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_white"
+            style="@style/btn_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="btnThermalCancel_click"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtThermalType"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                style="@style/lv_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/color_gray"
+                android:onClick="tvPeripheralType_Click"
+                android:hint="Choose Type" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtThermalCustomer"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                style="@style/lv_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/color_gray"
+                android:onClick="tvThermalCustomer_Click"
+                android:hint="Choose Customer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:text="TID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/box_form"
+                android:gravity="center_vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/txtTID"
+                    android:hint="Search TID"
+                    android:textSize="14dp"
+                    android:textColorHint="@color/hint"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:maxLength="50"
+                    android:backgroundTint="@color/transparan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </AutoCompleteTextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Qty."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edtThermalQty"
+                android:textStyle="normal"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:hint="Qty"
+                android:maxLength="5"
+                android:textColorHint="@color/color_gray"
+                android:background="@drawable/edt_default"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="CANCEL"
+                android:layout_margin="5dp"
+                android:onClick="btnThermalCancel_click"
+                style="@style/btn_default"
+                android:textSize="14dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp">
+
+            </Button>
+
+            <Button
+                android:text="OK"
+                android:layout_margin="5dp"
+                android:onClick="btnThermalOk_click"
+                style="@style/btn_default"
+                android:textSize="14dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp">
+
+            </Button>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

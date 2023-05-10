@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/shopee_detail_toolbar"
+        layout="@layout/_toolbar" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shopee_detail_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lengkapi Form Berikut"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama PIC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/shopee_detail_input_pic_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nomor PIC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/shopee_detail_input_pic_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SN EDC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/shopee_detail_input_sn_edc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SN SIM"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/shopee_detail_input_sn_sim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Foto bagian depan merchant"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/shopee_detail_input_merchant"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Foto mesin EDC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/shopee_detail_input_edc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Foto Formulir/Berita Acara"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/shopee_detail_input_formulir"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Foto Formulir/Berita Acara"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/shopee_detail_input_other"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Status"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/shopee_detail_input_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:background="@drawable/spinner_gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catatan"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/shopee_detail_input_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:lines="3"
+                android:background="@drawable/underline_input_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Latitude"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/shopee_detail_input_latitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Longitude"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/shopee_detail_input_longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/underline_input_gray"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/shopee_detail_input_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="S I M P A N"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:background="@color/primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Detail Lokasi"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Category"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Customer"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tanggal Release Ticket"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_ticket_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tanggal Import Bank"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_import_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Bank"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ID Lapor/OMPK/Case ID"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nomor Tiket"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="No SPK"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_spk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Pekerjaan"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_work_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TID/CSI"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_tid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TID CIMB"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_tid_cimb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="MID"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Merchant"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_merchant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alamat Merchant"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_merchant_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alamat Merchant 2"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_merchant_address_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kode Pos"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kota"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama PIC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_pic_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nomor PIC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_pic_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catatan Pra Kunjungan"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Kerusakan"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_damage_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kode INIT"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_init"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SLA"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_sla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SN EDC"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_sn_edc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SN SIM"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/shopee_detail_sn_sim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/underline_input_gray"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

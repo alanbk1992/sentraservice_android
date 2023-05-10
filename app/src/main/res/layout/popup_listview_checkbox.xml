@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="20dp"
+    android:layout_gravity="center"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="460dp">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@color/color_red_press"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvHeaderPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Header"
+            android:textColor="@color/color_white"
+            android:textSize="16dp" />
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            style="@style/btn_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="btnCloseItemCheckbox_click"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/lvPopup"
+            android:dividerHeight="0.3dp"
+            android:divider="@color/color_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnOkItem"
+            style="@style/btn_default"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="btnOkItemCheckbox_click"
+            android:text="OK"
+            android:textSize="14dp">
+
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

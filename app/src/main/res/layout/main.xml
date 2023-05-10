@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_layout"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="68dp"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_header"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/sentra_service" />
+        <!--        android:src="@mipmap/im_briit"-->
+
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            style="@style/btn_default"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="btnMenu_click"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:tint="@color/color_white" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:fontFamily="@font/primary"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/_navigation"
+        app:itemTextColor="@color/_navigation"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/_navigation" />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="30sp"
+    android:layout_gravity="center"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvHeaderPopup"
+            android:text="Header"
+            android:textColor="@color/color_white"
+            android:padding="12dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_white"
+            style="@style/btn_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="btnCloseItem_click"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/lvPopup"
+            android:dividerHeight="0.3dp"
+            android:divider="@color/color_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

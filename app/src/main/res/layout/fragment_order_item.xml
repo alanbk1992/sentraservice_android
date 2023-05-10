@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/fragment_order_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_info_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/underline_gray">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/fragment_order_item_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="assign_date"
+                        android:textSize="12dp"
+                        android:textColor="@color/gray"
+                        android:textStyle="italic"/>
+
+                    <TextView
+                        android:id="@+id/fragment_order_item_sla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="sla_date"
+                        android:textSize="12dp"
+                        android:textColor="@color/gray"
+                        android:textStyle="italic|bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fragment_order_item_aging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:text="aging_date"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fragment_order_item_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No. Ticket"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/fragment_order_item_merchant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/fragment_order_item_merchant_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/fragment_order_item_merchant_postalcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15323"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/underline_gray">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="TID"
+                    android:textSize="12dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fragment_order_item_tid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="MID"
+                    android:textSize="12dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fragment_order_item_mid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_order_item_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_order_item_save_offline_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#494949"
+            android:text="Save Offline"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

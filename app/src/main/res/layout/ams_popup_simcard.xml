@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_white"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvHeaderPopup"
+            android:text="SIM Card ICCID"
+            android:textColor="@color/color_white"
+            android:padding="12dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnSimCardClose"
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_white"
+            style="@style/btn_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="btnSimCardCancel_click"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/box_form"
+            android:gravity="center_vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/txtSimCard"
+                android:hint="Search ICCID"
+                android:textColorHint="@color/hint"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="10dp"
+                android:inputType="numberDecimal"
+                android:backgroundTint="@color/transparan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </AutoCompleteTextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvReportProblem"
+            android:text="Report Problem"
+            android:layout_margin="2dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSimCardCancel"
+                android:text="CANCEL"
+                android:layout_margin="5dp"
+                android:onClick="btnSimCardCancel_click"
+                style="@style/btn_default"
+                android:textSize="14dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnSubmitSimCard"
+                android:text="SUBMIT"
+                android:layout_margin="5dp"
+                android:onClick="btnSubmitSimCard_click"
+                style="@style/btn_default"
+                android:textSize="14dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp">
+
+            </Button>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

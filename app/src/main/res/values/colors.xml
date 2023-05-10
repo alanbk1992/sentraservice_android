@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333</color>
+    <color name="colorPrimaryDark">#333</color>
+    <color name="colorAccent">#333</color>
+
+    <color name="primary">#E00E11</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="color_background">#eee</color>
+    <color name="color_header">#ddd</color>
+    <color name="snack_black">#1a1a1a</color>
+    <color name="snack_blue">#2885e5</color>
+    <color name="blue_01">#00a5ba</color>
+    <color name="blue_01_press">#028ea0</color>
+    <color name="snack_red">#ef4036</color>
+
+    <color name="cream">#F0F0F0</color>
+    <color name="hint">#ccc</color>
+    <color name="transparan">#00ffffff</color>
+
+    <color name="color_default">#333</color>
+    <color name="color_default_press">#555</color>
+    <color name="color_gray">#aaa</color>
+    <color name="color_divider">#ccc</color>
+    <color name="color_gray_press">#999</color>
+    <color name="color_red_press">#eee60d18</color>
+    <color name="color_red_100">#ffcdd2</color>
+
+    <color name="color_grey">#777</color>
+    <color name="color_black">#333</color>
+    <color name="color_white">#fff</color>
+    <color name="color_red">#e57373</color>
+    <color name="color_green">#81c784</color>
+    <color name="color_indigo">#7986CB</color>
+    <color name="color_orange">#FFB74D</color>
+    <color name="color_purple">#BA68C8</color>
+    <color name="color_blue">#64B5F6</color>
+    <color name="color_blue_press">#2196F3</color>
+    <color name="color_header_transparan">#cc42A5F5</color>
+    <color name="color_header_press_transparan">#cc2196F3</color>
+    <color name="color_yellow">#FFF176</color>
+    <color name="color_yellow_press">#FFEE58</color>
+
+</resources>

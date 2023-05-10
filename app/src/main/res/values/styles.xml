@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="switchStyle">@style/Widget.App.Switch</item>
+    </style>
+
+    <style name="btn_red">
+        <item name="android:background">@drawable/btn_red</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="btn_default">
+        <item name="android:background">@drawable/btn_default_backcolor</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="btn_black">
+        <item name="android:background">@drawable/btn_black</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="btn_blue_01">
+        <item name="android:background">@drawable/btn_blue01</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="menu_text_active">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="menu_text_inactive">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/color_gray</item>
+    </style>
+
+    <style name="lv_default">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:drawableRight">@drawable/ic_down_default</item>
+        <item name="android:background">@drawable/edt_default</item>
+    </style>
+
+    <style name="btn_header">
+        <item name="android:background">@drawable/btn_header_backcolor</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="lbl_header_white">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="lbl_tab">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#eee</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="tab_text_appearance">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorSurface">@color/gray</item>
+        <item name="colorOnSurface">@color/color_divider</item>
+        <item name="colorSecondary">@color/color_red_100</item>
+    </style>
+</resources>
